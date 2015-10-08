@@ -68,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         if(payDay != null) {
-            text.setText(payDay.toString());
+            text.setText(utils.dateFormat.format(payDay));
         }
 
 
