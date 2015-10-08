@@ -44,5 +44,34 @@ public class MainActivity extends AppCompatActivity {
             text.setText("Er is iets misgegaan");
         }
 
+        Calendar cal = Calendar.getInstance();
+        Integer day = utils.payDate;
+        Integer month = cal.get(Calendar.MONTH)+1; // January = 0, etc
+        Integer year = cal.get(Calendar.YEAR);
+
+        if(day > utils.payDate){
+            month = month+1; // If we already passed payday we want to calculate for the next month.
+        }
+
+        if(month == 13){
+            // If we passed the 12th month we need to calculate for the next year (January)
+            month = 1;
+            year = year+1;
+        }
+
+        Date payDay = null;
+
+        try{
+            payDay = utils.dateFormat.parse(""+day+"/"+month+"/"+year);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+
+        if(payDay != null) {
+            text.setText(payDay.toString());
+        }
+
+
+
     }
 }

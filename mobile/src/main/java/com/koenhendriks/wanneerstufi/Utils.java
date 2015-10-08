@@ -14,6 +14,11 @@ import java.util.Locale;
  * Created by koen on 10/7/15.
  */
 public class Utils {
+    public Calendar cal = Calendar.getInstance();
+
+    public int payDate = 24;
+    public int payMonth = cal.get(Calendar.MONTH)+1;
+    public int payYear = cal.get(Calendar.YEAR);
 
     public SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy", Locale.getDefault());
     /**
