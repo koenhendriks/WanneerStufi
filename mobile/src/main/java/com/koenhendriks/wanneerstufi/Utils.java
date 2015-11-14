@@ -16,7 +16,7 @@ import java.util.Locale;
 public class Utils {
     public Calendar cal = Calendar.getInstance();
 
-    public int payDate = 24;
+    public int payDay = 24;
     public int payMonth = cal.get(Calendar.MONTH)+1;
     public int payYear = cal.get(Calendar.YEAR);
 
@@ -46,7 +46,8 @@ public class Utils {
         return (int)(diff / (24 * 60 * 60 * 1000));
     }
 
-    public void nextPayDay(){
+    // TODO: put functionality of MainActivity inside methods
+    public void nextPayDate(){
 
     }
 
