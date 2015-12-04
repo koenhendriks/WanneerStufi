@@ -7,6 +7,9 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.widget.TextView;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+
 import org.w3c.dom.Text;
 
 import java.text.ParseException;
@@ -27,6 +30,9 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         startService(new Intent(this, NotificationService.class));
 
+        AdView mAdView = (AdView) findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
 
         TextView text = (TextView) findViewById(R.id.date_untill);
         TextView textDate = (TextView) findViewById(R.id.date_placeholder);
