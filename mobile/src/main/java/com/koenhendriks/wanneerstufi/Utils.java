@@ -1,5 +1,12 @@
 package com.koenhendriks.wanneerstufi;
 
+import android.app.Application;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
+import android.content.Context;
+import android.content.Intent;
+import android.support.v4.app.TaskStackBuilder;
+import android.support.v7.app.NotificationCompat;
 import android.widget.TextView;
 
 import java.text.ParseException;
@@ -50,6 +57,4 @@ public class Utils {
     public void nextPayDate(){
 
     }
-
-
 }
